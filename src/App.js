@@ -57,7 +57,7 @@ export default function App() {
     <>
       <Switch>
         
-        <Route path='/goit-react-hw-06-phonebook' exact>
+        <Route path='/goit-react-hw-07-phonebook' exact>
           <Container>
             <h1 className={s.label}>Phonebook</h1>
       <ContactForm />
