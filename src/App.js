@@ -4,21 +4,15 @@ import Container from './components/Conteiner/Container';
 import s from './App.module.css';
 import Filter from './components/Filter';
 import ContactForm from './components/ContactForm';
-import { Route, Switch } from 'react-router';
+
 import ContactList from './components/ContactList';
-// import { ContactsPage } from './pages/contacts';
-import { useEffect,useState } from 'react';
+import { useState } from 'react';
 import { useFetchContactsQuery } from './redux/phonebook/phonebookSlice';
 
 
 export default function App() {
-  const { data, error, isFetching } = useFetchContactsQuery("");
+  const { data, isFetching } = useFetchContactsQuery("");
 
-  useEffect(() => {
-    if (error) {
-      // Notify.failure(`Error: ${error.status} ${error.data}`);
-    }
-  }, [error]);
   
   const [filter, setFilter] = useState('');
   
