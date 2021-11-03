@@ -3,6 +3,7 @@ li {
 .listItem {
   font-weight: 500;
   color: #4830f0;
+  justify-content: space-between;
 }
 
 .list {

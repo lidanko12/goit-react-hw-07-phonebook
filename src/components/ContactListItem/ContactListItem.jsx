@@ -9,14 +9,12 @@ export default function ContactLiSItem({ id, name, number }) {
             {`${name}: ${number}`}
             <button className={s.btn}
                 type="button" onClick={() => deleteContact(id)} disabled={isDeleting}>
-                    {/* {isDeleting ? 'Deleting...' : 'Delete'} */}
-                {isDeleting && <Loader
+                {isDeleting ?( <Loader
                                 type="ThreeDots"
                                 color="#000000"
                                 height={15}
                                 width={15}
-                            />} Delete  </button>
-        {/* </button> */}
+                            />):'Delete'} </button>
         </li>
     );
 }
